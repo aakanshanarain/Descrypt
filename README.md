@@ -4,5 +4,6 @@ Usage:
 
 License:
 
-Contributors: Shalini Seshadri & Aakansha Narain
+Contributors:
+Shalini Seshadri & Aakansha Narain
 
