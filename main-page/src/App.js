@@ -1,6 +1,6 @@
 import React, {Component, useState} from 'react';
 import './App.css';
-import * as ReactBootStrap from "react-bootstrap"; 
+import { Navbar, Nav, NavDropdown } from "react-bootstrap"; 
 import { Layout, Container, BoxUpload, ImagePreview} from './style';
 import x from './x.svg'; 
 
@@ -22,20 +22,22 @@ function App() {
   
     return (
     <div className="App">
-      <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <ReactBootStrap.Navbar.Brand href="#home">DESCRYPT-LOGO</ReactBootStrap.Navbar.Brand>
-  <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-    <ReactBootStrap.Nav className="container-fluid">
-    <ReactBootStrap.NavDropdown title="Profile" id="collasible-nav-dropdown">
-        <ReactBootStrap.NavDropdown.Item href="#myCheatsheets">My Cheatsheets</ReactBootStrap.NavDropdown.Item>
-        <ReactBootStrap.NavDropdown.Item href="#sharedWithMe">Shared with me</ReactBootStrap.NavDropdown.Item>
-        <ReactBootStrap.NavDropdown.Divider />
-        <ReactBootStrap.NavDropdown.Item href="#signOut">Sign Out</ReactBootStrap.NavDropdown.Item>
-      </ReactBootStrap.NavDropdown>
-    </ReactBootStrap.Nav>
-  </ReactBootStrap.Navbar.Collapse>
-</ReactBootStrap.Navbar>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  <Navbar.Brand href="#home">DESCRYPT-LOGO</Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="container-fluid">
+    <NavDropdown title="Profile" id="collasible-nav-dropdown">
+        <NavDropdown.Item href="#myCheatsheets">My Cheatsheets</NavDropdown.Item>
+        <NavDropdown.Item href="#sharedWithMe">Shared with me</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="#signOut">Sign Out</NavDropdown.Item>
+      </NavDropdown>
+    </Nav>
+  </Navbar.Collapse>
+</Navbar> 
+
+
    
    <Layout> 
     <Container> 
