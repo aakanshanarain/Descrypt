@@ -7,7 +7,7 @@ import folder from './folder.png'
 import './style.css';
 
 
-function App(handleLogout) {
+function App({handleLogout}) {
   const [image, setImage] = useState('')
   const [isUploaded, setIsUploaded] = useState(false)
   function handleImageChange(e) { 
@@ -25,63 +25,62 @@ function App(handleLogout) {
     return (
     <div className="App">
     
-    <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#myCheatsheets">My Cheatsheets</a>
-  <div class="right">
-  {/* <button onClick={handleLogout}> Logout </button> */}
-  <a href="#logout"> Logout </a>
-  </div> 
-</div>
+      <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#myCheatsheets">My Cheatsheets</a>
+        <div class="right">
+          <button onClick={handleLogout}> Logout </button>
+        </div> 
+      </div>
        
 
-   <Layout> 
-    <Container> 
-      <h3> Upload files here</h3>
-      <br>
+      <Layout> 
+        <Container> 
+          <h3> Upload files here</h3>
+          <br>
 
-      </br> 
-  
-    <BoxUpload>
-    <div className="file-upload">
-    { 
-        !isUploaded ? ( 
-        <> 
-          <label htmlFor="upload-input"> 
-      <img src='https://iconarchive.com/download/i99322/dtafalonso/yosemite-flat/Folder.ico'
-      draggable ={'false'} alt ="resize-img-upload-icon" style={{width: 90, height:120, alignItems: 'center'}}></img>  
-      <p style ={{ color: '#444'}}> Click to upload file </p>
-      </label>
-      <input 
-      id="upload-input" 
-      type="file" 
-      accept=".jpg, .pdf, .jpeg, .png"
-        onChange={handleImageChange}
-      /> 
-      </>
-        ) : ( 
-          <ImagePreview>
-          <img className="x" 
-          src={x} 
-          alt="CloseIcon"
-          onClick={() => {
-          setIsUploaded(false)
-          setImage(null)}} />
-           <img id ="uploaded-image"
-            src={image} 
-            alt="uploaded-image"
-            draggable={false}
-            />
-          </ImagePreview>
-        )
-
-    }
+          </br> 
       
-      </div>
-    </BoxUpload> 
-  
-    </Container> 
-   </Layout> 
+        <BoxUpload>
+        <div className="file-upload">
+        { 
+            !isUploaded ? ( 
+            <> 
+              <label htmlFor="upload-input"> 
+          <img src='https://iconarchive.com/download/i99322/dtafalonso/yosemite-flat/Folder.ico'
+          draggable ={'false'} alt ="resize-img-upload-icon" style={{width: 90, height:120, alignItems: 'center'}}></img>  
+          <p style ={{ color: '#444'}}> Click to upload file </p>
+          </label>
+          <input 
+          id="upload-input" 
+          type="file" 
+          accept=".jpg, .pdf, .jpeg, .png"
+            onChange={handleImageChange}
+          /> 
+          </>
+            ) : ( 
+              <ImagePreview>
+              <img className="x" 
+              src={x} 
+              alt="CloseIcon"
+              onClick={() => {
+              setIsUploaded(false)
+              setImage(null)}} />
+              <img id ="uploaded-image"
+                src={image} 
+                alt="uploaded-image"
+                draggable={false}
+                />
+              </ImagePreview>
+            )
+
+        }
+          
+          </div>
+        </BoxUpload> 
+      
+        </Container> 
+      </Layout> 
    
    
     </div>

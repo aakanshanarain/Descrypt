@@ -21,6 +21,14 @@ button {
   margin:auto;
 
 }
+
+.right button  {
+  padding: 15px;
+  width:100%;
+  background: #dca4e0;
+  color:black;
+}
+
 .button:hover {
   background: black;
 }
