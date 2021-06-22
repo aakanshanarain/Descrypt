@@ -1,5 +1,5 @@
 import React from 'react';
-import './main-page/App.css';
+import '../App.css';
 import logo from './logo.png';
 
 const Login = (props) => {

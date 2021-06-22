@@ -12,7 +12,11 @@ var firebaseConfig = {
     appId: "1:1060172340006:web:1f87aa0a2873b8cf49ffe7"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  if (!firebase.apps.length) {
+    firebase.initializeApp({});
+  } else {
+    firebase.app(); // if already initialized, use that one
+  }
 
   const projectStorage = firebase.storage(); 
   const projectFirestore = firebase.firestore(); 

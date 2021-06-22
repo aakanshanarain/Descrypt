@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import fire from './fire';
 import TempPage from './components/TempPage';
-import MainApp from './components/main-page/MainApp';
+import MainApp from './components/main-page/src/MainApp';
 import './App.css';
 import logo from './logo.png';
 import Login from './components/Login'
